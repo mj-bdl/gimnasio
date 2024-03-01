@@ -1,0 +1,61 @@
+<div id="main-body">
+    <mat-form-field>
+      <mat-label>Filtro</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Introduzca algo para buscar" #input>
+    </mat-form-field>
+
+    <div class="button-container">
+        <button mat-raised-button color="primary" (click)="openAddEditUserDialog()"><mat-icon>person_add</mat-icon></button>
+    </div>
+  
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+  
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+          <td mat-cell *matCellDef="let row"> {{row.firstName}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Apellidos </th>
+          <td mat-cell *matCellDef="let row"> {{row.lastName}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="province">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Provincia </th>
+          <td mat-cell *matCellDef="let row"> {{row.province}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Correo electrónico	</th>
+          <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="birthday">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha nacimiento	</th>
+          <td mat-cell *matCellDef="let row"> {{row.birthday | date:'dd/MM/yyyy'}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Acciones	</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button color="primary" (click)="openAddEditUserDialog(row)">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteUser(row.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No hay datos que mostrar</td>
+        </tr>
+      </table>
+  
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Selecciona una página"></mat-paginator>
+    </div>
+  </div>

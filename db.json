@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "firstName": "Juanita",
+      "lastName": "Pérez Linares",
+      "province": "Córdoba",
+      "email": "juan@juan.com",
+      "role": "usuario",
+      "birthday": "2017-01-09",
+      "token": "esteseraeltoken",
+      "id": "a31d"
+    },
+    {
+      "firstName": "Ana",
+      "lastName": "Ruiz Martín",
+      "province": "Huelva",
+      "email": "ana@ana.com",
+      "role": "administrador",
+      "birthday": "2024-02-15",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJBbmEiLCJlbWFpbCI6ImFuYUBhbmEuY29tIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6ImFkbWluaXN0cmFkb3IifQ.C9bodbnBescY3yJkGAUXT6n34OpbML3AGp2pQ_aqSSM",
+      "id": "6fb7"
+    },
+    {
+      "firstName": "Teresa",
+      "lastName": "Bueno Vaz",
+      "province": "Huelva",
+      "email": "tere@tere.com",
+      "role": "usuario",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJUZXJlc2EiLCJlbWFpbCI6InRlcmVAdGVyZS5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoidXN1YXJpbyJ9.A2SQ6EI-UZ6w7_Po49BzSqtAY7vzOxKleNwFN-_Xyho",
+      "id": "0d33",
+      "birthday": null
+    },
+    {
+      "firstName": "Luis",
+      "lastName": "Torres de la Hoz",
+      "province": "Huelva",
+      "email": "luis@luis.com",
+      "role": "usuario",
+      "birthday": "2024-02-08",
+      "token": "esteseraeltoken",
+      "id": "84cd"
+    },
+    {
+      "firstName": "aaa",
+      "lastName": "aaa",
+      "province": "Cádiz",
+      "email": "aa@aa.com",
+      "role": "usuario",
+      "birthday": "2009-06-01",
+      "token": "esteseraeltoken",
+      "id": "45ef"
+    }
+  ]
+}

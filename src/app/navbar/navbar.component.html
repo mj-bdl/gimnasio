@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">    
+    <span class="hand" routerLink="home">Gimnasio</span>
+    <span class="nav_spacer"></span>    
+    <div>
+        <button *ngIf="isAdmin" mat-button routerLink="users" routerLink="users">Administración de usuarios</button>
+        <button *ngIf="getLoggedFirstName()" mat-flat-button color="accent" class="menuButton" (click)="logout()">Salir ({{ firstname }})</button>
+        <button *ngIf="!getLoggedFirstName()" mat-flat-button color="accent" class="menuButton" routerLink="login">Entrar</button>
+    </div>
+</mat-toolbar>
